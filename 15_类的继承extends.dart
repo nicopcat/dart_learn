@@ -1,9 +1,7 @@
 void main(List<String> args) {
-  final p = Person();
+  final p = Person('black', 'bear', 18);
   p.name = '熊熊';
   p.age = 18;
-  p.race = 'yellow';
-  print(p.name);
   p.eating();
 }
 
@@ -21,9 +19,7 @@ class Animal {
 class Person extends Animal {
   String? race;
 
-  Person(this.race, String name, int age)
-      : super(name),
-        super(age);
+  Person(this.race, String name, int age) : super(name);
 
   @override
   void eating() {
